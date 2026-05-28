@@ -1,0 +1,120 @@
+*{
+	margin: 0; /*Reseteando la hoja WEB, quitando espaciados por defecto*/
+	padding: 0; /*Reseteando la hoja WEB, quitando rellenados por defecto*/
+	text-decoration: none; /*Quitamos el subrayado de los textos de vinculos*/
+	color: #eaeaea; /* Color a todo el texto en general */
+
+	font-family: "Montserrat", sans-serif;/*Definimos la fuente del tema, ( Estilo de letra )*/
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+body{ /* Fondo crepusculo */
+	/*height: 300vh; Esto es temporal para probar la posicion fixed del header*/
+	background: #0c1c3a; /*Definimos color del fondo oscuro*/
+	display: flex; /*Para que el footer o pie de pagina se mantenga abajo*/
+	flex-direction: column; /*Para que el footer o pie de pagina se mantenga abajo*/
+}
+#headerID{
+	display: flex; /*Para que todos los elementos se alinien horizontalmente */
+	align-items: center; /*Para que todos los elementos se centreen en base a la altura */
+	justify-content: space-around; /*Para que todos los elementos se ordenen de forma equitativa */
+	width: 100vw; /* Definimos el ancho de la Barra de navegacion */
+	position: fixed; /* Fijamos la Barra de navegacion cuando hagamos scroll vertical */
+	background: rgba(0, 0, 0, .5);
+	z-index: 10;
+}
+		.divlogoCLASS{display:flex;align-items:center;justify-content:space-between;width:32%;}
+				#headerID img{width:25%;margin:0.6vw 0vw 0.6vw 0vw;}
+						.tituloCLASS{font-size:2.5vw;letter-spacing:0.3vw;font-weight:400;}
+						.subtituloCLASS{font-size:1.2vw;letter-spacing:0.54vw;}
+
+		#navegacionID a{font-size:1.2vw;padding:0.3vw 1.4vw;letter-spacing:0.15vw;position:relative;transition:.7s;}
+		#iconoSolID{font-size:2.5vw;cursor:pointer;transition: .7s;}
+		#movilID{display:none;}
+		#labelID{display:none;}
+				#burgerIconID{display:none;}
+
+/*Línea subrayado animada conbinar con javascript*/
+#navegacionID a::after {/*after en español es despues*/
+  content: ""; /* Para la animacion del hover y su subrayado IA*/
+  position: absolute; /* Para la animacion del hover y su subrayado IA*/
+  left: 0; /* Para la animacion del hover y su subrayado IA*/
+  bottom: -0.4vw; /* Para la animacion del hover y su subrayado IA*/
+  width: 0%; /* Para la animacion del hover y su subrayado IA*/
+  height: 0.2vw; /* Para la animacion del hover y su subrayado IA*/
+  background: #eeb235; /* Para la animacion del hover y su subrayado IA*/
+  transition: .7s; /* Para la animacion del hover y su subrayado IA*/
+}
+#navegacionID a:hover {color:#eeb235;}/*Para el color de las letras de navegacion IA*/
+#navegacionID a:hover::after {width: 100%;}/*Para la animacion del hover y su subrayado IA*/
+/* Estado activo (queda subrayado) */
+#navegacionID a.active { color: #eeb235;} /*Para cuando hagamos click y su subrayado activado IA*/
+#navegacionID a.active::after { width: 100%;} /*Para cuando hagamos click y su subrayado activado IA*/
+
+#iconoSolID:hover{color:#eeb235;}/*Color Dorado cuando pasamos el raton por el icono sol*/
+
+body.fondoClaro{/*Activar fondoClaro, Definimos cuando el usuario haga click en el icono sol, el fondo del body pasa a claro*/
+  background-color:#dee7ed;/*fondo claro*/
+  transition:.7s;/* Transicion entre el crepusculo y claro */
+  *{color:#666;}/*Color del texto*/
+  #headerID{background-color:white;}
+  .introduccion{color:white;}
+  .eslogan{color:white;}
+ 	#navegacionID a{background-color:white;}
+ 	#footerID{background-color:white;}
+ 	hr{border-top:0.35vh solid #666;}
+ 	.DerechoReserbado{color:white;}
+ 	.bloqueINFO{background-color: #eee9; box-shadow: 1vw 1vw 2vw rgba(0, 0, 0, .2);}
+ 	.contactoRedes a{background:rgb(255,255,255,0.9);border:0.1vw solid #c6c6c6;}
+ 	.contactanos, .descripcion{color:white;}
+ 	.usuario{color:#f5b93c;}
+}/*Ahora nos vamos a 3ModoOscuroClaroBODY.js*/
+
+.btnReutilizable{
+	border: 0.2vw solid transparent;
+  background: #eba615;
+  font-size: 1.1vw;
+  letter-spacing: 0.2vw;
+  font-weight: 500;
+  padding: 1vw 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .7s;
+  box-shadow: 0.3vw 0.3vw 2vw rgba(0, 0, 0, .8);
+}
+.btnReutilizable:hover{ background-color: transparent; color: #eba615; border: 0.2vw solid #eba615; }
+
+/*===================== Movil responsive =====================*/
+@media(max-width:790px){
+	#headerID{}
+	.divlogoCLASS{width:60%;}
+	#headerID img{width:5em;margin:0.63em 0em 0.63em 0em;}
+	.tituloCLASS{font-size:1em;}
+	.subtituloCLASS{font-size:0.6em;}
+	#iconoSolID{font-size: 2.1em;}
+	#movilID{display:none;}
+	#labelID{display:block;}
+	#burgerIconID{display:block;font-size:2.5em;transition:.7s;}
+	#burgerIconID:hover{color:#eeb235;}
+	#movilID:checked~nav{right:-0%;}
+	#navegacionID{
+		display: block;
+		position: fixed;
+		width: 100%;
+		top: 15%;
+	 	right: -106%;
+		transition: .9s;
+	}
+	#navegacionID a{
+		display: block;
+		font-size: 0.9em;
+		text-align: center;
+		padding: 1.5em;
+		border-bottom: 2px solid #999;
+		background-color: rgba(0, 0, 0, .5);
+	}
+	.btnReutilizable{font-size:0.8rem;padding:0.5rem 3.3rem;border:0.1vw solid transparent;}
+	.btnReutilizable:hover{border:0.1vw solid #eeb235;}
+}

@@ -1,0 +1,36 @@
+#footerID{background: rgba(0, 0, 0, .7);
+		margin-top:auto;/*Para que se vaya abajo*/
+		display:flex;flex-direction:column;width:100%;height:auto;/*Definimos la altura automatico*/}
+		.contenedor_1{width:99%;height:auto;display:flex;justify-content:center;gap:3vw;}
+				.bloque123{display:flex;flex:1;flex-direction:column;align-items:center;margin:1.5vw 0vw;}
+						.tituloFooter{font-size:1.25vw;font-weight:800;letter-spacing:0.13vw;}
+						.AuxDet{width:77%;}
+						.detalleFooter{text-align:justify;letter-spacing:0.15vw;font-size:1vw;}
+						hr{width: 60%;
+							margin-top: 1.5vh; 
+							margin-bottom:1.5vh; 
+							border: none;/*Quita estilo por defecto */
+    						border-top: 0.35vh solid white;/* Grosor, estilo y color en uno */}
+						.Aux{display:flex;flex-direction:column;}
+						.Aux a ion-icon{font-size:5.3vh;margin-right:0.5vw;transition:.7s;}
+						.Aux a{font-size:1vw;letter-spacing:0.15vw;transition:.7s;display:flex;align-items:center;}
+						.Aux a:hover{color:#eba615;}
+						.Aux a:hover ion-icon{color:#eba615;}
+		.contenedor_2{background:black;width:100%;display:flex;align-items:center;justify-content:center;}
+				.DerechoReserbado{color:white;font-size:1vw;padding:1.5vw;letter-spacing:0.15vw;}
+
+/*===================== Movil responsive =====================*/
+@media(max-width:790px){
+	#footerID{padding-top:2em;}
+			.contenedor_1{flex-direction:column;padding-bottom:0.5em;}
+					.bloque123{}
+							.tituloFooter{font-size:1.1em;}
+							.AuxDet{}
+							.detalleFooter{font-size:1em;}
+							hr{}
+							.Aux{}
+							.Aux a ion-icon{}
+							.Aux a{font-size:1em;}
+			.contenedor_2{}
+					.DerechoReserbado{font-size:0.8em;padding:2em 0em;}
+}

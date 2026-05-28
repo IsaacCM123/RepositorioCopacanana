@@ -1,0 +1,289 @@
+.dosBloquesVerticales{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  margin:auto;
+  margin-top:10vw;
+  margin-bottom:2vw;}
+
+.marcoBase{
+  width:55vw;
+  height:75vh;
+  position:relative;}/*overflow: hidden; Para que no se desborde.*/
+  
+img{
+  width:100%;
+  height:100%;
+  object-fit:cover;}/*Ajusta la imagen:cover,contain,fill*/
+
+.info{
+  width:96%;
+  position:absolute;
+  top:4.7vw;
+  left:50%;
+  transform:translate(-50%, -50%);
+  color:#fff;
+  text-align:center;
+  background:rgba(0,0,0,.5);
+  padding:1.5vw 0vw;}
+
+#nombreHabitacionID{
+  color:#eaeaea;/*para que se mantenga el texto blanco en modo claro*/
+  font-size:1.2vw;
+  letter-spacing:0.2vw;
+  margin-bottom:0.8vw;}
+
+#privilegiosAlUsuarioID ion-icon{
+  color:#eaeaea;
+  font-size:2.2vw;
+  padding:0vw 1vw;}
+
+.BotonIzqDer{
+  position:absolute;
+  width:90%;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  display:flex;
+  justify-content:space-between;}
+
+.BotonIzqDer button {
+  background-color:#eee9;
+  color:#fff;
+  border-radius: 50%;
+  border:none;
+  font-family:monospace;
+  font-size:2vw;
+  box-shadow:0.5vh 0.5vh 0.5vh rgba(0, 0, 0, 0.5);
+  padding:1.5vw 2.2vw;
+  cursor:pointer;
+  transition:.7s;}
+
+.BotonIzqDer button:hover {
+  background-color:#eee;
+  color:#555;
+  box-shadow:1.3vh 1.3vh 1.3vh rgba(0, 0, 0, 0.6);}
+
+#detalleHabitacionID{
+  width:70%;
+  position:absolute;
+  bottom:2%;
+  left:2%;
+  background-color:rgba(0,0,0,.5);
+  padding:1vw 1.4vw;}
+
+#detalleHabitacionID h4{
+  color:#eaeaea;
+  font-size:1.1vw;
+  border-left:0.2vw solid white;
+  padding:1vw 1vw;
+  margin-bottom:1vw;
+  letter-spacing:0.2vw;}
+
+#detalleHabitacionID p{
+  color:#eaeaea;
+  font-size:1vw;
+  letter-spacing:0.1vw;
+  text-align:justify;
+  margin-bottom:1.3vw;}
+
+#estadoID{
+  font-size:1vw;
+  letter-spacing:0.2vw;
+  padding:0.5vw 4vw;
+  position:absolute;/*Cuando le damos position:absolute, automaticamente se convierte en:display:inline-block;*/
+  bottom:1%;
+  left:1%;
+  cursor:default;}
+
+.disponible{background:#08a434;color:#fff;}/*........Añadimos para el backend*/
+.ocupado{background:#d61a21;color:#fff;}/*........Añadimos para el backend*/
+
+#iconWTP{
+  position:absolute;
+  bottom:4%;
+  right:2%;
+  font-size:4vw;
+  color:#08a434;
+  filter:drop-shadow(2px 2px 2px #000);}
+
+/*==============================Ventana modal solo del adminitrador==============================*/
+.usuario{
+    font-size:3vw;
+    color:#f5b93c;
+    position:absolute;
+    top:9vw;
+    z-index: 9;
+    right:1vw;}
+
+#ventanaModal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  justify-content:center;
+  z-index:100;
+  align-items:center;}
+
+.contenidoCajasTexto{
+    background:#fff;
+    width:40%;
+    border-radius:0.5vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:1vw 0vw 1vw 0vw;
+    animation:fadeIn .7s ease;
+    position:relative;}
+    @keyframes fadeIn{from{opacity:0;transform:scale(0.9);}to{opacity:1;transform:scale(1);}}
+
+.cerrar{
+    position:absolute;
+    top:1vw;
+    right:1vw;
+    color:#6e6e6e;
+    font-size:2vw;}
+
+#textID{
+    border:0.1vw solid #929292;
+    width:40%;
+    font-size:1vw;
+    padding:0.5vw;
+    color:#0e0e0e;
+    letter-spacing:0.1vw;
+    margin-top:1vw;}
+
+#passID{
+    border:0.1vw solid #929292;
+    width:40%;
+    font-size:1vw;
+    padding:0.5vw;
+    color:#0e0e0e;
+    letter-spacing:0.1vw;
+    margin-top:1vw;}
+
+#ingresarBTN{
+    width:fit-content;
+    padding:1vw 4vw;
+    font-size:1vw;
+    background:#f5b93c;
+    margin-top:1vw;
+    letter-spacing: 0.1vw;
+    color:#0e0e0e;}
+
+#emoji ion-icon{
+    color:#f5b93c;
+    font-size:3vw;
+    margin-top:1vw;}
+
+/*=====================Responsive adaptado solo para dspositivos moviles=====================*/
+@media(max-width:790px){
+
+.usuario{
+  top:11em;
+  right:0.2em;
+  font-size:3em;}
+
+.dosBloquesVerticales{
+  margin-top:7em;
+  margin-bottom:1em;}
+
+.marcoBase{
+  width:98vw;
+  height:70vh;}
+  
+img{/**/}
+
+.info{
+  width:96%;
+  position:absolute;
+  top:2.5em;
+  padding:0.6em 0em;}
+
+#nombreHabitacionID{
+  font-size:0.7em;
+  letter-spacing:0.2em;
+  margin-bottom:0.3em;}
+
+#privilegiosAlUsuarioID ion-icon{
+  font-size:1.3em;
+  padding:0em 0.4em;}
+
+.BotonIzqDer{/**/}
+
+.BotonIzqDer button {
+  font-size:1.6em;
+  padding:0.38em 0.75em;}
+
+#detalleHabitacionID{
+  width:65%;
+  bottom:3%;
+  left:3%;
+  padding:1em 1.4em;}
+
+#detalleHabitacionID h4{
+  font-size:0.8em;
+  border-left:0.1em solid #fff;
+  padding:0.6em 0.5em;
+  margin-bottom:0.5em;
+  letter-spacing:0.12em;}
+
+#detalleHabitacionID p{
+  font-size:0.7em;
+  letter-spacing:0.1em;
+  margin-bottom:1em;}
+
+#estadoID{
+  font-size:0.8em;
+  left:2%;
+  bottom:2%;
+  padding:0.5em 3em;}
+
+#iconWTP{
+  bottom:13%;
+  right:3%;
+  font-size:2.7em;}
+
+  /*=============================ventana modal=============================*/
+  #ventanaModal{/**/}
+
+.contenidoCajasTexto{
+    width:60%;
+    border-radius:0.5em;
+    padding:1em 0em 1em 0em;}
+
+.cerrar{
+    top:0.3em;
+    right:0.3em;
+    color:#6e6e6e;
+    font-size:1.5em;}
+
+#textID{
+    border:0.1vw solid #929292;
+    width:60%;
+    font-size:0.7em;
+    padding:0.5em;
+    letter-spacing:0.2em;
+    margin-top:1.5em;}
+
+#passID{
+    border:0.1vw solid #929292;
+    width:60%;
+    font-size:0.7em;
+    padding:0.5em;
+    letter-spacing:0.2em;
+    margin-top:1em;}
+
+#ingresarBTN{
+    padding:0.7em 3em;
+    font-size:0.7em;
+    margin-top:1em;
+    letter-spacing: 0.2em;}
+
+#emoji ion-icon{
+    font-size:3em;
+    margin-top:0.1em;}
+}

@@ -1,0 +1,67 @@
+.contenedorGeneral{
+  position:relative;
+  margin:auto;/*Para centrear el elemento*/
+  margin-top:10vw;/*margen de una pulgada de arriba*/
+  margin-bottom:2vw;/*espacio de abajo de una pulgada*/
+  width:95vw;
+  display:flex;
+  justify-content: center;
+  align-items:center;}
+
+#deslizarVideos{
+  display:flex;/* Para que los bloques de video se posicionen en forma horizontal */
+  width:97%;
+  gap:2vw;/* Espaciado entre elementos, de izquierdad a derecha */
+  overflow:hidden;
+  overflow-x:auto;}/*Elemento Scroll horizontal activado solo para movil*/
+
+.targeta{
+    margin-bottom:1.5vw;
+    text-align:center;}
+
+.targeta video{
+    object-fit:cover;/*Esta propiedad nos permite que la img (POSTER) se acople a la dimension de 300x150 por que la img. es de 300x300*/
+    box-shadow: 1px 1px 15px rgba(255, 255, 255, .7);
+    border-radius:1vw;}
+
+.targeta h4{
+  letter-spacing:0.3vw;
+  font-size:1vw;
+  margin-bottom:1vw;}
+
+#izquierda, #derecha{
+  background:#eee7;
+  padding:2vw;
+  color:#FFF;
+  border:none;
+  font-size:2vw;
+  border-radius:50%;
+  transition:.7s;}
+#izquierda:hover, #derecha:hover{background:#EEE;color:#555;box-shadow:0.5vw 0.5vw 1vw rgba(0,0,0,0.7);}
+
+#izquierda{margin-right:-7vw;}
+#derecha{margin-left:-7vw;}
+/*...........................Movil...........................*/
+@media(max-width:790px){
+.contenedorGeneral{
+margin-top:7em;
+margin-bottom:1em;}
+
+#deslizarVideos{gap:2em;}
+
+.targeta{margin-bottom:0em;}
+
+.targeta video{
+box-shadow:none;
+border-radius:1em;}
+
+.targeta h4{
+letter-spacing:0.3em;
+font-size:1em;
+margin-bottom:1em;}
+
+#izquierda, #derecha{font-size:1.5em;}
+
+#izquierda{margin-right:-2em;}
+#derecha{margin-left:-2em;}
+}

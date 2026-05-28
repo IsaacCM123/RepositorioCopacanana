@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Casa de Huespedes Copacabana</title>
+		
+		<link rel="icon" href="./../img/icon.png">
+
+		<!--Estilo de texto Montserrat-->
+		<link rel="preconnect"href="https://fonts.googleapis.com">
+		<link rel="preconnect"href="https://fonts.gstatic.com"crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit&display=swap"rel="stylesheet">
+		
+		<link rel="stylesheet" href="../css/2_Header.css">
+		<link rel="stylesheet" href="../css/8_FooterComponenteReutilizable.css">
+		<link rel="stylesheet" href="../css/17_CargarVideosServices.css">
+	</head>
+	<body>
+		<header id="headerID">
+			<div class="divlogoCLASS">
+				<img src="./../img/logo.png">
+				<div class="divNomEmpCLASS">
+					<h4 class="tituloCLASS">COPACABANA</h4><p class="subtituloCLASS">Casa de Huéspedes</p>
+				</div>
+			</div>
+
+			<ion-icon id="iconoSolID" name="sunny-sharp"></ion-icon>
+
+			<input type="checkbox" id="movilID">
+			<label for="movilID" id="labelID">
+				<ion-icon name="reorder-three-sharp" id="burgerIconID" onclick="cambiar()"></ion-icon>
+			</label>
+			<nav id="navegacionID">
+				<a href="../../index.html">Inicio</a>
+				<a href="3_Portfolio.html">Portafolio</a>
+				<a href="4_Services.html"class="active">Servicios</a>
+				<a href="5_Blogs.html">Blogs</a>
+				<a href="6_Contact.html">Contactos</a>
+			</nav>
+		</header>
+
+		<!--Montar videos-servicios de habitaciones con slider-->
+		<div class="contenedorGeneral">
+			<ion-icon name="chevron-back" id="izquierda"></ion-icon>
+			<div id="deslizarVideos"><!--Los videos se insertaran aqui desde 16_CargarVideosDesdeJson.JS--></div>
+			<ion-icon name="chevron-forward" id="derecha"></ion-icon>
+		</div>
+
+		<footer id="footerID"><!--El footer será insertado aquí con JS (13)--></footer>
+
+		<script type="module"src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script src="../script/3_ModoOscuroClaroBody.js"></script>
+		<script src="..//script/4_AmburguesaAnimada.js"></script>
+		<script src="../script/7_FooterComponenteReutilizable.js"></script>
+		<script src="../script/16_CargarVideosConLazy.js"></script>
+	</body>
+</html>

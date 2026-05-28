@@ -1,0 +1,62 @@
+#marcoMainID{
+  width:80vw;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin:0 auto;
+  gap:3vw;
+  margin-top:4vw;
+  margin-bottom:4vw;
+}
+    .targetaN-DisplayFlex{
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+        .marcoIMG{
+          width: 50%;
+        }
+            .marcoIMG img{
+              width: 100%;
+              left: 0;
+              bottom: 0;
+              transform: scale(0);
+              transform-origin: center;
+              animation: showImage linear forwards;
+              animation-timeline: view();
+              animation-range: entry 20% cover 40%;
+              border-radius: 10px;
+            }
+            @keyframes showImage{to{transform:scale(1);}}
+        .bloqueINFO {
+          width: 60%;
+          text-align: justify;
+          background: rgb(255, 255, 255, 0.1);
+          backdrop-filter: blur(20px);
+          transform: translate(-60px, 20px);
+          padding: 3vw;
+          border-radius: 10px;
+          border: 1px solid rgb(255, 255, 255, 0.1);
+        }
+            .bloqueINFO h2 {
+              font-size: 1.7vw;
+              margin-bottom: 1.5vw;
+              letter-spacing: 0.07vw;
+            }
+            .bloqueINFO p {
+              font-size: 1.2vw;
+              line-height: 1.5;
+              letter-spacing: 0.07vw;
+            }
+
+/* ==== RESPONSIVE ==== */
+@media(max-width: 790px){
+  #marcoMainID{width:99vw;margin-top:4em;margin-bottom:4em;gap:9em;}
+      .targetaN-DisplayFlex{flex-direction:column;width:99%;}
+          .marcoIMG{width:100%;}
+          .marcoIMG img{border-radius:none;} /* No hace efecto */
+      .bloqueINFO{width:80%;transform:translate(0px,20px);padding:2em;}
+          .bloqueINFO h2{font-size: 1.5em;}
+          .bloqueINFO p{font-size: 1em;}
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html><!--(1)Tipo de documento Importante!-->
+<html lang="es"><!--(2)Web en español-->
+<head>
+	<meta charset="utf-8"><!--(3)Tipo de caracteres universal-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!--(4)Para trabajar con diseño responsivo-->
+	<title>Copacabana</title><!--(5)Nombre de la empresa en la pestaña-->
+	<!--(6) Icono de la empresa en la pestaña-->
+	<link rel="icon" href="./assets/img/icon.png">
+
+	<!--Estilo de texto Montserrat-->
+	<link rel="preconnect"href="https://fonts.googleapis.com">
+	<link rel="preconnect"href="https://fonts.gstatic.com"crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit&display=swap"rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/css/2_Header.css"><!--(9)-->
+	<link rel="stylesheet" href="assets/css/5_PortadaPrincipal.css"><!--(11)-->
+	<link rel="stylesheet" href="assets/css/8_FooterComponenteReutilizable.css"><!--(15)-->
+	<link rel="stylesheet" href="assets/css/10_TarjetaReutilizable.css"><!--(18)-->
+</head>
+<body>
+
+	<header id="headerID"><!--(8) Con el estilo y la animacion nos vamos a 2_Header.CSS-->
+		<div class="divlogoCLASS">
+			<img src="./assets/img/logo.png">
+			<div class="divNomEmpCLASS">
+				<h4 class="tituloCLASS">COPACABANA</h4><p class="subtituloCLASS">Casa de Huéspedes</p>
+			</div>
+		</div>
+
+		<ion-icon id="iconoSolID" name="sunny-sharp"></ion-icon>
+
+		<input type="checkbox" id="movilID">
+		<label for="movilID" id="labelID">
+			<ion-icon name="reorder-three-sharp" id="burgerIconID" onclick="cambiar()"></ion-icon>
+		</label>
+		<nav id="navegacionID">
+			<a href="index.html"class="active">Inicio</a>
+			<a href="assets/html/3_Portfolio.html">Portafolio</a>
+			<a href="assets/html/4_Services.html">Servicios</a>
+			<a href="assets/html/5_Blogs.html">Blogs</a>
+			<a href="assets/html/6_Contact.html">Contactos</a>
+		</nav>
+	</header>
+
+	<!--(10) Ahora trabajamos con la portada-->
+	<div class="portadaPrincipal">
+		<div class="imgSlider active"></div>
+		<div class="imgSlider"></div>
+		<div class="imgSlider"></div>
+		<div class="imgSlider"></div>
+		<div class="capaOscura"></div>
+		<div class="informacion">
+			<p class="introduccion">HOGAR DULCE HOGAR</p>
+			<p class="eslogan">No hay mejor lugar como el hogar</p>
+			<a href="#" class="btnReutilizable">Cual prefieres?</a>
+		</div>
+	</div><!--(11) Ahora nos vamos a 5_PortadaPrincipal.css-->
+
+	<main id="marcoMainID"><!--Tarjetas se insertarán aquí con 9_TarjetaReutilizable.JS (16)--></main>
+
+	<footer id="footerID"><!--El footer será insertado aquí con 7_FooterComponenteReutilizable.JS (13)--></footer>
+
+	<!--(7) Importamos iconos desde la plataforma ion-icon-->
+	<script type="module"src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script src="assets/script/3_ModoOscuroClaroBody.js"></script>
+	<script src="assets/script/4_AmburguesaAnimada.js"></script>
+	<script src="assets/script/6_PortadaPrincipalMov.js"></script><!--(12) Damos movimiento a la portada principal-->
+	<script src="assets/script/7_FooterComponenteReutilizable.js"></script><!--(14) Despues de terminar con esto. Nos vamos al .CSS-->
+	<script src="https://unpkg.com/scrollreveal"></script><!-- (19) -->
+	<script src="assets/script/9_TarjetaReutilizable.js"></script><!-- (17) -->
+</body>
+</html>

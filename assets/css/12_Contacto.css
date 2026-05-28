@@ -1,0 +1,125 @@
+ #contactoCuerpoID{width:100%;display:block;margin:auto;margin-bottom:3vw;}
+	 .portadaContacto{width:100%;display:flex;background-color:#7152ff;margin-bottom:4vw;}
+		 .contenidoTextContacto{margin:auto;margin-left:3vw;flex:1;}
+			 	.contactanos{
+			 		font-size:1.5vw;
+			 		font-weight:400;
+			 		letter-spacing:0.2vw;
+			 		border-left:0.22vw solid #eaeaea;
+			 		padding:1.3vw;
+			 		margin-bottom:1.3vw;}
+
+			 	.descripcion{font-size:1.15vw;letter-spacing:0.1vw;text-align:justify;}
+		.contenedorIMG{flex:1;height:80vh;}
+				 .portadaContacto img{width:100%;height:100%; mask-image:linear-gradient(to left,#7152ff 30%, transparent);}
+
+	.bloqueFormulario{display:flex;}
+		.contenidoForm{flex:1;margin:0vw 5vw 0vw 3vw;}
+			.textoEnviarEmail{font-size:1.15vw;letter-spacing:0.12vw;text-align:justify;margin-bottom:3vw;}
+		 	#formID{width:99%;display:flex;flex-direction:column;}
+	 		input{color:black;padding:1vw;font-size:1vw;letter-spacing:0.1vw;}
+	 		#consultaID{color:black;padding:0.5vw;font-size:1vw;letter-spacing:0.1vw;}
+	 		button{
+	 			color:#fff;
+	 			border:0.25vw solid transparent;
+	 			font-weight:500;
+	 			padding:1.5vw 0vw 1.5vw 0vw;
+	 			font-size:1.2vw;
+	 			letter-spacing:0.1vw;
+	 			background-color:#eba615;
+	 			transition:.7s;}
+
+	 		button:hover{
+	 			border: 0.25vw solid #eba615;
+	 			background-color: transparent;
+	 			color: #eba615;
+	 			cursor: pointer;}
+
+	 	.contactoRedes{display:flex;flex-direction:column;flex:1;}
+	 		.contactoRedes a{
+	 							border: 0.1vw solid #eee9;
+	 							background: rgba(0, 0, 0, .7);
+	 							display: flex;
+	 							align-items: center;
+	 							width: 60%;
+	 							height: 20%;
+	 							margin-top: 1.4vw;
+	 							border-radius: 0.5vw;
+	 							transition: .7s;
+	 						}
+	 		.contactoRedes a:hover{
+	 			border: 0.1vw solid #eba615;
+	 			background-color: transparent;
+	 			box-shadow: 1vw 1vw 2vw rgba(0, 0, 0, .9);
+	 		}
+	 		.contactoRedes a ion-icon{font-size:3vw; margin: 0vw 1.5vw;}
+	 		.referencias{
+	 			font-size: 1.1vw;
+	 		}
+
+ /*=================================== Responsive Movil ==================================*/
+ @media(max-width:790px){
+ 	 #contactoCuerpoID{width:100%;margin-bottom:0;}
+
+ 	 	.portadaContacto{
+ 	 		width: 100%;
+ 	 		flex-direction:column;}
+
+ 	 		.contenidoTextContacto{
+ 	 			width:80%;
+ 	 			margin:8em 0em 0em 1em;}
+
+ 	 			.contactanos{
+ 	 				font-size:1em;
+ 	 				margin-bottom:0.5em;}
+
+ 	 			.descripcion{
+ 	 				font-size:0.7em;}
+
+ 	 		.contenedorIMG{}
+
+ 	 		.contenedorIMG img{mask-image:linear-gradient(to top,#7152ff 50%, transparent);display: block;}
+ 	 .bloqueFormulario{
+ 	 	flex-direction: column-reverse;
+ 	 	margin: 3em 0em 1em 0em;
+ 	 }
+ 	 	.contenidoForm{
+ 	 		margin:1em auto;
+ 	 		width: 90%;
+ 	 	}
+ 	 		.textoEnviarEmail{font-size:1em;text-align:justify;}
+
+		 	#formID{width: 90%; margin: 0 auto;}
+		 		input{font-size: 1em;}
+		 		#consultaID{font-size: 1em;}
+		 		button{padding: 0.7em;font-size: 1em;}
+
+
+
+
+
+
+
+	.contactoRedes{margin-left: 1em;}
+	 		.contactoRedes a{
+	 			/*border: 2px solid lawngreen;*/
+	 							border: 0.1vw solid #eee9;
+	 							background: rgba(0, 0, 0, .7);
+	 							display: flex;
+	 							align-items: center;
+	 							width: 80%;
+	 							margin-top: 0.7em;
+	 							border-radius: 0em;
+	 							transition: .7s;
+	 							padding: 1em;
+	 						}
+	 		.contactoRedes a:hover{
+	 			border: 0.1vw solid #eba615;
+	 			background-color: transparent;
+	 			box-shadow: 1vw 1vw 2vw rgba(0, 0, 0, .9);
+	 		}
+	 		.contactoRedes a ion-icon{font-size:2em; margin: 0vw 1.5vw;}
+	 		.referencias{
+	 			font-size: 0.7em;
+	 		}
+ }
