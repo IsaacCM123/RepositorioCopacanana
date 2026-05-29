@@ -8,7 +8,7 @@ e.preventDefault()
     consulta:document.getElementById('consultaID').value
   }
 
-  const response=await fetch('http://localhost:3000/send-email',{
+  const response=await fetch('/send-email',{/*Le quitamos http://localhost:3000, para produccion en RENDER*/
     method:'POST',
     headers:{
       'Content-Type':'application/json'
