@@ -6,6 +6,14 @@
   margin-top:10vw;
   margin-bottom:2vw;}
 
+.usuario{
+  font-size:3vw;
+  color:#f5b93c;
+  position:absolute;
+  top:2vw;
+  right:2vw;
+  z-index:9;}
+
 .marcoBase{
   width:55vw;
   height:75vh;
@@ -101,20 +109,13 @@ img{
 
 #iconWTP{
   position:absolute;
-  bottom:4%;
-  right:2%;
-  font-size:4vw;
+  bottom:1vw;
+  right:1vw;
+  font-size:3vw;
   color:#08a434;
   filter:drop-shadow(2px 2px 2px #000);}
 
 /*==============================Ventana modal solo del adminitrador==============================*/
-.usuario{
-    font-size:3vw;
-    color:#f5b93c;
-    position:absolute;
-    top:9vw;
-    z-index: 9;
-    right:1vw;}
 
 #ventanaModal{
   display:none;
@@ -182,11 +183,6 @@ img{
 /*=====================Responsive adaptado solo para dspositivos moviles=====================*/
 @media(max-width:790px){
 
-.usuario{
-  top:11em;
-  right:0.2em;
-  font-size:3em;}
-
 .dosBloquesVerticales{
   margin-top:7em;
   margin-bottom:1em;}
@@ -242,10 +238,15 @@ img{/**/}
   bottom:2%;
   padding:0.5em 3em;}
 
+.usuario{
+  right:0.1em;
+  top:7.5em;
+  font-size:3em;}
+
 #iconWTP{
-  bottom:13%;
-  right:3%;
-  font-size:2.7em;}
+  bottom:0.2em;
+  right:0.2em;
+  font-size:2.6em;}
 
   /*=============================ventana modal=============================*/
   #ventanaModal{/**/}
