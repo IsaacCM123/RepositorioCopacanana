@@ -35,7 +35,7 @@ io.on('connection',(socket)=>{
                                                                 const{nombre,telefono,correo,consulta}=req.body
 
                                                                 let transporter=nodemailer.createTransport({
-                                                                  service:'smtp.gmail.com',
+                                                                  host:'smtp.gmail.com',
                                                                   port:587,
                                                                   family:4,/*Forzar IP solo para desplegar a render lo borramos, no afecta*/
                                                                   secure:false,
